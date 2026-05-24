@@ -48,10 +48,7 @@ with st.sidebar:
     )
 
 
-    # if selected_option:
-    #     st.markdown(f"You selected **{selected_option}** as difficulty of your Quiz")
-    # else:
-    #     st.error("You Must select a defficulty")
+    
 
     pressed = st.button("Click the button to initiate AI",type = "primary")
 
@@ -71,7 +68,7 @@ if pressed:
         with st.container(border = True):
             st.subheader("Your note")
 
-            # the portion will be replace by API call
+           
 
             with st.spinner("Ai is writting note for you"):
 
@@ -83,7 +80,7 @@ if pressed:
         with st.container(border = True):
             st.subheader("Audio transcription")
 
-            # the portion will be replace by API call
+           
             with st.spinner("Ai is generating audio for you"):
                 generated_notes = generated_notes.replace("#"," ")
                 generated_notes = generated_notes.replace("*"," ")
@@ -101,7 +98,7 @@ if pressed:
         with st.container(border = True):
             st.subheader(f"Quiz ({selected_option})")
 
-            # the portion will be replace by API call
+           
             with st.spinner("Ai is generating quiz for you"):
                 generated_quiz = quiz_generator(pil_images,selected_option)
                 st.markdown(generated_quiz)
