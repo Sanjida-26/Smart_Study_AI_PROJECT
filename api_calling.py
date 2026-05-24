@@ -12,7 +12,7 @@ my_api_key = os.getenv("GEMINI_API_KEY")
 
 #initializing a client
 
-client = genai.Client(api_key=my_api_key) # connecting client to gemini server through Api key
+client = genai.Client(api_key=my_api_key) 
 
 
 
